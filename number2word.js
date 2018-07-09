@@ -7,17 +7,17 @@ function in_words(number) {
     }
   
     if (number < 12) {
-      output = output + angka[number];
+      output += angka[number];
     }
     
     else if (number < 20) {
-		output = output + angka[number - 10] + ' belas'
+		output += angka[number - 10] + ' belas'
     }
   
     else if (number < 100) {
 		let digitAwal = Math.floor(number / 10);
 		let digitSisa = number % 10;
-		output = output + angka[digitAwal] + ' puluh ' + angka[digitSisa];
+		output += angka[digitAwal] + ' puluh ' + angka[digitSisa];
     }
     
     else if (number < 200) {
@@ -26,22 +26,22 @@ function in_words(number) {
     
     else if (number < 1000) {
 		let digitAwal = Math.floor(number / 100);
-    	output = output + angka[digitAwal] + ' ratus ' + in_words(number % 100);
+    	output += angka[digitAwal] + ' ratus ' + in_words(number % 100);
 	}
 	
 	else if (number < 10000) {
 		let digitAwal = Math.floor(number / 1000);
-    	output = output + angka[digitAwal] + ' ribu ' + in_words(number % 1000);
+    	output += angka[digitAwal] + ' ribu ' + in_words(number % 1000);
 	}
 	
 	else if (number < 100000) {
 		let digitAwal = Math.floor(number / 10000);
-    	output = output + angka[digitAwal] + ' puluh ' + in_words(number % 10000);
+    	output += angka[digitAwal] + ' puluh ' + in_words(number % 10000);
 	}
 	
 	else if (number < 1000000) {
 		let digitAwal = Math.floor(number / 100000);
-    	output = output + angka[digitAwal] + ' ratus ' + in_words(number % 100000);
+    	output += angka[digitAwal] + ' ratus ' + in_words(number % 100000);
     }
     
     return output
