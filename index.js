@@ -35,8 +35,13 @@ function in_words(num) {
         return `${numberToWords[Math.trunc(num/1000)]} ribu ${in_words(num % 1000)}`
     } else if (num < 20000) {
         return `${numberToWords[Math.trunc(num/1000) - 10]} belas ribu ${in_words(num % 1000)}`
+    } else if (num < 100000) {
+        return `${in_words(Math.trunc(num/1000))} ribu ${in_words(num % 1000)}`
+    } else if (num < 1000000) {
+        return `${in_words(Math.trunc(num/1000))} ribu ${in_words(num % 1000)}`
+    } else if (num < 1000000) {
+        return `${in_words(Math.trunc(num/1000000))} juta ${in_words(num % 10000)}`
     }
- 
 }
 
 // console.log(in_words(5))
@@ -48,5 +53,8 @@ function in_words(num) {
 // console.log(in_words(421))
 // console.log(in_words(1273))
 // console.log(in_words(1993))
-console.log(in_words(4444))
-console.log(in_words(13677))
+// console.log(in_words(4444))
+// console.log(in_words(13677))
+// console.log(in_words(87562))
+// console.log(in_words(268996))
+// console.log(in_words(4567789))
